@@ -1,0 +1,14 @@
+# Works on Linux (Fedora/Ubuntu, CUDA wheels are pulled automatically from PyPI) and Windows/macOS (CPU).
+torch>=2.4
+torchvision>=0.19
+torchmetrics>=1.4
+torch-fidelity>=0.3
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.8
+reportlab>=4.0
+jupyter>=1.0
+nbconvert>=7.0
+nbclient>=0.10
+ipykernel>=6.29
