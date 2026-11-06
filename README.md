@@ -6,6 +6,7 @@
 | `PartB_WGAN_WGANGP.ipynb` | Part B: WGAN (weight clipping) and WGAN-GP |
 | `partC_report.py` | Part C: builds `PartC_Comparative_Analysis.pdf` from the saved results and figures |
 | `run_all.py` | Runs A → B → C end to end (executes the notebooks, embeds the outputs, exports HTML + PDF) |
+| `embed_lab_screenshot.py` | Embeds the Prayogshala screenshot into both notebooks (safe to re-run on executed notebooks) |
 | `notebook_pdf.py` | Prints the executed notebooks' HTML to PDF with headless Chrome/Edge (no LaTeX needed) |
 | `setup_env.sh` / `setup_env.ps1` | Create `.venv` on Linux (Fedora/Ubuntu) / Windows |
 
@@ -38,10 +39,10 @@ You can also open the notebooks in Jupyter and run them cell by cell (kernel "Py
 Rough full-run time: Part A ≈ 1.5 h and Part B ≈ 2–2.5 h, measured on an Intel Arc A770 (a lab NVIDIA GPU should be similar or faster). The epoch and iteration counts are in the `CFG` cell of each notebook.
 
 ## 3. Submission checklist
-- [ ] `PartA_BetaVAE_VQVAE.ipynb` + `.html` (outputs embedded)
-- [ ] `PartB_WGAN_WGANGP.ipynb` + `.html`
-- [ ] `PartC_Comparative_Analysis.pdf`
-- [ ] Screenshot (`.jpg`) of the BITS Prayogshala GPU in use (`nvidia-smi` while training)
+- [ ] `PartA_BetaVAE_VQVAE.ipynb` + `.html` + `.pdf` (outputs embedded)
+- [ ] `PartB_WGAN_WGANGP.ipynb` + `.html` + `.pdf`
+- [ ] `PartC_Comparative_Analysis.pdf` (lab screenshot in the appendix)
+- [ ] `Prayogshala_lab_screenshot.jpg` (also embedded in both notebooks via `python embed_lab_screenshot.py`)
 
 ## 4. Group 93
 | # | Name | BITS ID | Contribution |
