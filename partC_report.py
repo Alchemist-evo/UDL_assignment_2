@@ -99,8 +99,17 @@ def fig(path, w_cm, caption):
 
 
 par("Assignment 2 – Part C: Comparative Analysis of β-VAE, VQ-VAE, WGAN and WGAN-GP on CIFAR-10", H1)
-par("Unsupervised Deep Learning (S1-26_AIMLZG533) &nbsp;|&nbsp; Group: <i>[member names / IDs]</i>")
-par(f"All models were trained on the BITS Prayogshala GPU ({A.get('device', 'cuda')}). Pixels were scaled to [0,1]. "
+par("Unsupervised Deep Learning (S1-26_AIMLZG533) &nbsp;|&nbsp; <i>Submitted by</i> <b>Group 93</b>")
+table([["#", "Name", "BITS ID", "Contribution"],
+       ["1", "Prajwal Shetty K P", "2025AE05434", "Part B: WGAN & WGAN-GP, training, samples, FID"],
+       ["2", "Tanushi Agarwal", "2025AE05410", "Part A: β-VAE, VQ-VAE and PixelCNN prior"],
+       ["3", "Shahabuddin", "2025AE05328", "Data pipeline, PSNR/FID evaluation, BITS lab GPU runs"],
+       ["4", "SANTHOSH M", "2025AE05426", "Part C: comparative analysis & PDF report"],
+       ["5", "TUFAIL AHMAD", "2025AE05400", "Visualisation, result tables, HTML export & review"]],
+      [0.8 * cm, 3.6 * cm, 2.6 * cm, 9.4 * cm])
+story.append(Spacer(1, 6))
+hw = A.get("gpu_name", A.get("device", "GPU"))
+par(f"All models were trained on: <b>{hw}</b>. Pixels were scaled to [0,1]. "
     "Every FID uses the same protocol: 10,000 generated images compared against the 10,000 CIFAR-10 test images "
     "(Inception-v3 pool3 features, torchmetrics), so the numbers are directly comparable across Part A and Part B.")
 

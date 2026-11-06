@@ -34,11 +34,19 @@ python run_all.py --only B    # run a single part (A | B | C)
 Each model saves a checkpoint to `outputs/checkpoints/`. If a session dies, re-running skips the models that are already trained.
 You can also open the notebooks in Jupyter and run them cell by cell (kernel "Python (udl-a2)").
 
-Rough full-run time on one modern NVIDIA GPU: Part A ≈ 1.5–2.5 h and Part B ≈ 2–3 h. The epoch and iteration counts are in the `CFG` cell of each notebook.
+Rough full-run time: Part A ≈ 1.5 h and Part B ≈ 2–2.5 h, measured on an Intel Arc A770 (a lab NVIDIA GPU should be similar or faster). The epoch and iteration counts are in the `CFG` cell of each notebook.
 
 ## 3. Submission checklist
 - [ ] `PartA_BetaVAE_VQVAE.ipynb` + `.html` (outputs embedded)
 - [ ] `PartB_WGAN_WGANGP.ipynb` + `.html`
 - [ ] `PartC_Comparative_Analysis.pdf`
 - [ ] Screenshot (`.jpg`) of the BITS Prayogshala GPU in use (`nvidia-smi` while training)
-- [ ] Group names/IDs filled in (notebook headers + PDF)
+
+## 4. Group 93
+| # | Name | BITS ID | Contribution |
+|---|---|---|---|
+| 1 | Prajwal Shetty K P | 2025AE05434 | Part B: WGAN & WGAN-GP |
+| 2 | Tanushi Agarwal | 2025AE05410 | Part A: β-VAE, VQ-VAE + PixelCNN |
+| 3 | Shahabuddin | 2025AE05328 | Data pipeline, PSNR/FID evaluation, lab GPU runs |
+| 4 | SANTHOSH M | 2025AE05426 | Part C: comparative analysis & PDF |
+| 5 | TUFAIL AHMAD | 2025AE05400 | Visualisation, result tables, HTML export & review |
