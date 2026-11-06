@@ -40,3 +40,5 @@ for part in ["A", "B"]:
         run_notebook(NOTEBOOKS[part])
 if args.only in (None, "C"):
     subprocess.run([sys.executable, "partC_report.py", out_dir], check=True)
+# PDF copies of the executed notebooks (printed from the HTML exports)
+subprocess.run([sys.executable, "notebook_pdf.py"] + ([out_dir] if args.quick else []), check=True)

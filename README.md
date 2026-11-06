@@ -5,7 +5,8 @@
 | `PartA_BetaVAE_VQVAE.ipynb` | Part A: β-VAE (β ∈ {1,2,4,10}) and VQ-VAE (K ∈ {512,256,128}) with a Gated PixelCNN prior |
 | `PartB_WGAN_WGANGP.ipynb` | Part B: WGAN (weight clipping) and WGAN-GP |
 | `partC_report.py` | Part C: builds `PartC_Comparative_Analysis.pdf` from the saved results and figures |
-| `run_all.py` | Runs A → B → C end to end (executes the notebooks, embeds the outputs, exports HTML) |
+| `run_all.py` | Runs A → B → C end to end (executes the notebooks, embeds the outputs, exports HTML + PDF) |
+| `notebook_pdf.py` | Prints the executed notebooks' HTML to PDF with headless Chrome/Edge (no LaTeX needed) |
 | `setup_env.sh` / `setup_env.ps1` | Create `.venv` on Linux (Fedora/Ubuntu) / Windows |
 
 ## 1. Environment
