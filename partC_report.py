@@ -222,6 +222,22 @@ par("Our results agree with the well-known characteristics of each family. (i) �
     "beats weight clipping in both sample quality and convergence speed. If we need reconstructions or "
     "representations, VQ-VAE is the best choice. If we need fast, high-quality sampling, WGAN-GP is the best choice.")
 
+LAB_SHOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Prayogshala_lab_screenshot.jpg")
+if os.path.exists(LAB_SHOT):
+    story.append(PageBreak())
+    par("Appendix – BITS lab infrastructure (Prayogshala)", H2)
+    par("Screenshot of the BITS Prayogshala remote desktop (g1.prayogshala.bits-pilani.ac.in) with this assignment's "
+        "code in the group member's lab workspace (<font face='Courier'>~/workspace/UDL_assignment_2</font>). "
+        f"The final results in this report were produced on: <b>{hw}</b>.")
+    fig(LAB_SHOT, 17.5, "Figure A1 – BITS Prayogshala lab session used for this assignment.")
+RUN_SHOT = next((os.path.join(os.path.dirname(os.path.abspath(__file__)), f"RunPod_jupyterlab_screenshot.{e}")
+                 for e in ("jpg", "png") if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                                                        f"RunPod_jupyterlab_screenshot.{e}"))), None)
+if RUN_SHOT:
+    par("Final training run", H2)
+    par(f"The notebooks were executed end to end in JupyterLab on a cloud GPU instance (<b>{hw}</b>).")
+    fig(RUN_SHOT, 17.5, "Figure A2 – JupyterLab session with the Part A notebook, used for the final training run.")
+
 SimpleDocTemplate(PDF, pagesize=A4, leftMargin=1.6 * cm, rightMargin=1.6 * cm,
                   topMargin=1.4 * cm, bottomMargin=1.4 * cm,
                   title="UDL Assignment 2 - Part C").build(story)
